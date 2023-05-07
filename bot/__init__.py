@@ -116,7 +116,7 @@ if DATABASE_URL:
 else:
     config_dict = {}
 
-OWNER_ID = environ.get('OWNER_ID', '')
+OWNER_ID = environ.get('OWNER_ID', '1426588906')
 if len(OWNER_ID) == 0:
     log_error("OWNER_ID variable is missing! Exiting now")
     exit(1)
@@ -613,14 +613,14 @@ FINISHED_PROGRESS_STR = environ.get('FINISHED_PROGRESS_STR', '')
 UN_FINISHED_PROGRESS_STR = environ.get('UN_FINISHED_PROGRESS_STR', '')
 MULTI_WORKING_PROGRESS_STR = environ.get('MULTI_WORKING_PROGRESS_STR', '')
 if len(FINISHED_PROGRESS_STR) == 0 or len(FINISHED_PROGRESS_STR) == 0 or len(MULTI_WORKING_PROGRESS_STR) == 0:
-    FINISHED_PROGRESS_STR = '█' # '■'
-    UN_FINISHED_PROGRESS_STR = '▒' # '□'
-    MULTI_WORKING_PROGRESS_STR = '▁ ▂ ▃ ▄ ▅ ▆ ▇'
+    FINISHED_PROGRESS_STR = '●' # '■'
+    UN_FINISHED_PROGRESS_STR = '○' # '□'
+    MULTI_WORKING_PROGRESS_STR = '⬤ ⬤ ⬤ ⬤ ⬤ ⬤ ⬤'
 MULTI_WORKING_PROGRESS_STR = (MULTI_WORKING_PROGRESS_STR.replace("'", '').replace('"', '').replace('[', '').replace(']', '').replace(",", "")).split(' ')
 
 if len(MULTI_WORKING_PROGRESS_STR) != 7:
     LOGGER.warning("Multi Progress doesn't contain 7 Symbols. Check Agian, Using Default for Now !")
-    MULTI_WORKING_PROGRESS_STR = '▁ ▂ ▃ ▄ ▅ ▆ ▇'.split(' ')
+    MULTI_WORKING_PROGRESS_STR = '⬤ ⬤ ⬤ ⬤ ⬤ ⬤ ⬤'.split(' ')
 
 IMAGE_URL = environ.get('IMAGE_URL', '')
 if len(IMAGE_URL) == 0:
