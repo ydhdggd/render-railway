@@ -30,10 +30,10 @@ default_values = {'AUTO_DELETE_MESSAGE_DURATION': 30,
                   'TIME_GAP': -1,
                   'TG_SPLIT_SIZE': tgBotMaxFileSize,
                   'TGH_THUMB': 'https://te.legra.ph/file/3325f4053e8d68eab07b5.jpg',
-                  'START_BTN1_NAME': 'Master',
-                  'START_BTN1_URL': 'https://t.me/krn_adhikari',
-                  'START_BTN2_NAME': 'Support Group',
-                  'START_BTN2_URL': 'https://t.me/WeebZone_updates',
+                  'START_BTN1_NAME': 'ᴍᴀsᴛᴇʀ',
+                  'START_BTN1_URL': 'https://t.me/Hari_OP',
+                  'START_BTN2_NAME': 'sᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ',
+                  'START_BTN2_URL': 'https://t.me/Hs_Botz',
                   'AUTHOR_NAME': 'WZML',
                   'AUTHOR_URL': 'https://t.me/WeebZone_updates',
                   'TITLE_NAME': 'WeebZone',
@@ -41,9 +41,9 @@ default_values = {'AUTO_DELETE_MESSAGE_DURATION': 30,
                   'CREDIT_NAME': 'WeebZone',
                   'NAME_FONT': 'code',
                   'CAPTION_FONT': 'code',
-                  'FINISHED_PROGRESS_STR': '█',
-                  'UN_FINISHED_PROGRESS_STR': '▒',
-                  'MULTI_WORKING_PROGRESS_STR': '▁ ▂ ▃ ▄ ▅ ▆ ▇'.split(' '),
+                  'FINISHED_PROGRESS_STR': '●',
+                  'UN_FINISHED_PROGRESS_STR': '○',
+                  'MULTI_WORKING_PROGRESS_STR': '⬤ ⬤ ⬤ ⬤ ⬤ ⬤ ⬤'.split(' '),
                   'IMAGE_URL': 'https://graph.org/file/6b22ef7b8a733c5131d3f.jpg',
                   'TIMEZONE': 'Asia/Kolkata',
                   'LIST_MODE': "Telegraph",
@@ -483,14 +483,14 @@ def load_config():
     START_BTN1_NAME = environ.get('START_BTN1_NAME', '')
     START_BTN1_URL = environ.get('START_BTN1_URL', '')
     if len(START_BTN1_NAME) == 0 or len(START_BTN1_URL) == 0:   
-        START_BTN1_NAME = 'Master'
-        START_BTN1_URL = 'https://t.me/krn_adhikari'
+        START_BTN1_NAME = 'ᴍᴀsᴛᴇʀ'
+        START_BTN1_URL = 'https://t.me/Hari_OP'
 
     START_BTN2_NAME = environ.get('START_BTN2_NAME', '')
     START_BTN2_URL = environ.get('START_BTN2_URL', '')
     if len(START_BTN2_NAME) == 0 or len(START_BTN2_URL) == 0:   
-        START_BTN2_NAME = 'Support Group'
-        START_BTN2_URL = 'https://t.me/WeebZone_updates'
+        START_BTN2_NAME = 'sᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ'
+        START_BTN2_URL = 'https://t.me/Hs_Botz'
 
     BUTTON_FOUR_NAME = environ.get('BUTTON_FOUR_NAME', '')
     BUTTON_FOUR_URL = environ.get('BUTTON_FOUR_URL', '')
@@ -629,9 +629,9 @@ def load_config():
     MULTI_WORKING_PROGRESS_STR = environ.get('MULTI_WORKING_PROGRESS_STR', '')
     MULTI_WORKING_PROGRESS_STR = MULTI_WORKING_PROGRESS_STR.split(' ')
     if len(FINISHED_PROGRESS_STR) == 0 or len(FINISHED_PROGRESS_STR) == 0 or len(MULTI_WORKING_PROGRESS_STR) == 0:
-        FINISHED_PROGRESS_STR = '█' # '■'
-        UN_FINISHED_PROGRESS_STR = '▒' # '□'
-        MULTI_WORKING_PROGRESS_STR = '▁ ▂ ▃ ▄ ▅ ▆ ▇'.split(' ')
+        FINISHED_PROGRESS_STR = '●' # '■'
+        UN_FINISHED_PROGRESS_STR = '○' # '□'
+        MULTI_WORKING_PROGRESS_STR = '⬤ ⬤ ⬤ ⬤ ⬤ ⬤ ⬤'.split(' ')
 
 
     IMAGE_URL = environ.get('IMAGE_URL', '')
