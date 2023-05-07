@@ -13,11 +13,11 @@ list_listener = {}
 
 def common_btn(isRecur, msg_id):
     buttons = ButtonMaker()
-    buttons.sbutton("Folders", f"types folders {msg_id}")
-    buttons.sbutton("Files", f"types files {msg_id}")
-    buttons.sbutton("Both", f"types both {msg_id}")
-    buttons.sbutton(f"Recursive {'✅️' if isRecur else ''}", f"types recur {msg_id}")
-    buttons.sbutton("Cancel", f"types cancel {msg_id}")
+    buttons.sbutton("ғᴏʟᴅᴇʀs", f"types folders {msg_id}")
+    buttons.sbutton("ғɪʟᴇs", f"types files {msg_id}")
+    buttons.sbutton("ʙᴏᴛʜ", f"types both {msg_id}")
+    buttons.sbutton(f"ʀᴇᴄᴜʀsɪᴠᴇ {'✔' if isRecur else ''}", f"types recur {msg_id}")
+    buttons.sbutton("ᴄᴀɴᴄᴇʟ", f"types cancel {msg_id}")
     return buttons.build_menu(3)
 
 def list_buttons(update, context):
@@ -92,12 +92,12 @@ def clist(update, context):
         ind = handleIndex(int(data[3]), udata)
         no = len(udata) - abs(ind+1) if ind < 0 else ind + 1
         if len(udata) > 1:
-            buttons.sbutton("⌫", f"cari {user_id} changepg {ind-1}")
-            buttons.sbutton(f"Pᴀɢᴇs\n{no} / {len(udata)}", f"cari {user_id} pagnav {ind}")
-            buttons.sbutton("⌦", f"cari {user_id} changepg {ind+1}")
+            buttons.sbutton("⇚", f"cari {user_id} changepg {ind-1}")
+            buttons.sbutton(f"ᴘᴀɢᴇs\n{no} / {len(udata)}", f"cari {user_id} pagnav {ind}")
+            buttons.sbutton("⇛", f"cari {user_id} changepg {ind+1}")
         else:
-            buttons.sbutton(f"Pᴀɢᴇs\n{no} / {len(udata)}", f"cari {user_id} pagnav {ind}")
-        buttons.sbutton("Close", f"cari {user_id} clo", 'footer')
+            buttons.sbutton(f"ᴘᴀɢᴇs\n{no} / {len(udata)}", f"cari {user_id} pagnav {ind}")
+        buttons.sbutton("ᴄʟᴏsᴇ", f"cari {user_id} clo", 'footer')
         exdata = formList[0]
         extras = f'''╭ <b>Query :</b> <i>{exdata[0]}</i>
 ├ <b>Total Results :</b> <i>{exdata[1]}</i>
@@ -108,8 +108,8 @@ def clist(update, context):
         query.answer()
         for no, _ in enumerate(formList[1]):
             buttons.sbutton(str(no+1), f'cari {user_id} changepg {no}')
-        buttons.sbutton("Back", f"cari {user_id} changepg {data[3]}", "footer")
-        buttons.sbutton("Close", f"cari {user_id} clo", "footer")
+        buttons.sbutton("ʙᴀᴄᴋ", f"cari {user_id} changepg {data[3]}", "footer")
+        buttons.sbutton("ᴄʟᴏsᴇ", f"cari {user_id} clo", "footer")
         editMessage("Choose the Page no. from below :", query.message, buttons.build_menu(7))
     else:
         try:
